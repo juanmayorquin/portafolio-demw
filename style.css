@@ -31,23 +31,7 @@ body {
     color: var(--font-color);
     font-size: 1.6rem;
     line-height: 1.6;
-}
-
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 2rem 0;
-    position: fixed;
-    width: 100%;
-}
-
-.navbar-items {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    gap: 2rem;
-    width: 100%;
+    scroll-snap-type: y proximity;
 }
 
 header {
@@ -59,6 +43,11 @@ header {
     justify-content: center;
     gap: 1rem;
     position: relative;
+    scroll-snap-align: center;
+}
+
+section {
+    scroll-snap-align: center;
 }
 
 .header-prefix {
@@ -104,6 +93,7 @@ header h2 {
 .logo:hover {
     background-color: var(--font-color);
     color: var(--background-color);
+    transform: scale(1.1);
 }
 
 .social-media a {
@@ -126,6 +116,10 @@ header h2 {
     align-items: center;
     text-align: center;
     position: relative;
+}
+
+.habilidades-blandas, .habilidades-duras {
+    width: 85%;
 }
 
 .habilidades-title {
@@ -177,7 +171,7 @@ header h2 {
 
 .proyectos-content {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
     margin-top: 2rem;
 }
@@ -190,6 +184,12 @@ header h2 {
     transition: all 0.3s ease;
 }
 
+.proyecto svg {
+    width: 10rem;
+    height: 10rem;
+    margin-bottom: 2rem;
+}
+
 .proyecto h4 {
     margin: 1rem 0;
 }
@@ -200,6 +200,7 @@ header h2 {
 
 .proyecto:hover {
     background-color: rgb(256, 256, 256, 0.2);
+    transform: scale(1.02);
 
 }
 
@@ -210,21 +211,59 @@ header h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
+    text-align: left;
     position: relative;
-    justify-content: center;
-    gap: 5rem;
+}
+
+.gitignore li {
+    list-style: decimal;
+    font-size: 2.5rem;
 }
 
 .gitignore h3 {
+    font-size: 4rem;
+    padding: 4rem 0;
+    color: white;
+}
+
+.gitignore h4 {
+    font-size: 3rem;
     padding-top: 4rem;
     color: white;
 }
 
-.gitignore span {
+.gitignore p {
+    color: white;
+    font-size: 1.6rem;
+}
+
+code {
+    font-family:  "Inconsolate", monospace;
+    background-color: #111111;
+    color: white;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    font-size: 1.6rem;
+}
+
+.turquoise {
+
     color: var(--font-color);
 }
 
-.gitignore p {
+.orange {
+    color: orange;
+}
+
+.gray {
+    color: gray;
+}
+
+.blue {
+    color: rgb(21, 136, 231);
+}
+
+h5 {
+    font-size: 2.5rem;
     color: white;
 }
